@@ -1,48 +1,48 @@
-<h2>Project endpoint</h2>
-
-<h3>Employees</h3>
-Get employees <br>
-<code>
+# Api rest with spring demo
+**This project is a simple api rest for manage employees and order**
+## Employees
+Get employees  
+```
 curl -v {{ host }}/employees/ | json_pp
-</code>
+```
 
-Get single employee <br>
-<code>
+Get single employee  
+```
 curl -v {{ host }}/employees/{{id}} | json_pp
-</code>
+```
 
-Add a new employee <br>
-<code>
+Add a new employee  
+```
 curl -v -X POST {{host}}/employees -H 'Content-Type:application/json' -d '{"name": "Samwise Gamgee", "role": "gardener"}'
-</code>
+```
 
-Delete employee <br>
-<code>
+Delete employee  
+```
 curl -v -X DELETE {{host}}/employees/{{id}}
-</code>
+```
 
-<h3>Order</h3>
-Get Orders <br>
-<code>
+## Order
+Get Orders  
+```
 curl -v {{host}}/orders
-</code>
+```
 
-Get single order <br>
-<code>
+Get single order  
+```
 curl -v {{host}}/orders/{{id}}
-</code>
+```
 
-Add new order <br>
-<code>
+Add new order  
+```
 curl -v -X POST {{host}}/orders -H 'Content-Type:application/json' -d '{"description":"all about order"}'
-</code>
+```
 
-Cancel order <br>
-<code>
+Cancel order  
+```
 curl -v -X DELETE {{host}}/orders/{{id}}/cancel
-</code>
+```
 
-Complete order <br>
-<code>
+Complete order  
+```
 curl -v -X PUT {{host}}/orders/{{id}}/complete
-</code>
+```
